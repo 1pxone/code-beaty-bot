@@ -8,6 +8,6 @@ const bot = new Telegraf(BOT_TOKEN);
 bot.command('oldschool', (ctx) => ctx.reply('Hello'));
 bot.command('modern', ({ reply }) => reply('Yo'));
 bot.command('hipster', Telegraf.reply('λ'));
-bot.on('message', ({ reply, message }) => reply(JSON.stringify(message.text, null, 4)));
+bot.on('message', ({ reply, message }) => reply(JSON.stringify(JSON.parse(message.text), null, 4)));
 
 bot.launch();
