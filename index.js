@@ -20,7 +20,7 @@ const formatJson = (message) => {
 
 bot.command('/json', ({ reply, message, ...ctx }) => {
     // ctx.telegram.leaveChat(ctx.message.chat.id)
-    reply(JSON.stringify({ ctx, message }));
+    reply(JSON.stringify(message));
     reply(formatJson(message));
 });
 
