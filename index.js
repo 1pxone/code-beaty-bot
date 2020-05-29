@@ -12,15 +12,13 @@ bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
 
 const formatJson = (message) => {
     try {
-        return JSON.stringify(JSON.parse(message.text), null, 4);
+        return JSON.stringify(JSON.parse(message.text.replace('/json ', '')), null, 4);
     } catch (e) {
         return 'Invalid code';
     }
 };
 
-bot.command('/json', ({ reply, message, ...ctx }) => {
-    // ctx.telegram.leaveChat(ctx.message.chat.id)
-    reply(JSON.stringify(message));
+bot.command('/json', ({ reply, message }) => {
     reply(formatJson(message));
 });
 
