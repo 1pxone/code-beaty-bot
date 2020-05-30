@@ -23,7 +23,7 @@ bot.command('/json', ({ reply, message }) => {
 });
 
 bot.command('/start', ({ reply }) => {
-    reply('Hi there!🤖 My name is Cody. \n I would like to format your code. \n Type /help for more info. ');
+    reply('Hi there!🤖 My name is Cody.\nI would like to format your code.\nType /help for more info. ');
 });
 
 bot.command('/help', ({ reply }) => {
