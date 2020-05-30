@@ -22,4 +22,12 @@ bot.command('/json', ({ reply, message }) => {
     reply(formatJson(message));
 });
 
+bot.command('/start', ({ reply }) => {
+    reply('Hi there!🤖 My name is Cody. \n I would like to format your code. \n Type /help for more info. ');
+});
+
+bot.command('/help', ({ reply }) => {
+    reply('Type /json command to format json');
+});
+
 bot.on('message', ({ reply, message }) => reply(formatJson(message)));
