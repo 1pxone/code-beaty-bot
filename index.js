@@ -27,7 +27,7 @@ bot.command('/start', ({ reply }) => {
 });
 
 bot.command('/help', ({ reply }) => {
-    reply('Type /json command to format json');
+    reply('Type /json {JSON_TO_FORMAT} command to format json');
 });
 
 bot.on('message', ({ reply, message }) => reply(formatJson(message)));
